@@ -35,7 +35,7 @@ module.exports = (app, options) => {
 	    res.status(200).send({
           username: user.username,
           phoneNumber: user.phone_number,
-		  profile_image: "Profile image not found"
+		      profile_image: "Profile image not found"
         });
     });
       }

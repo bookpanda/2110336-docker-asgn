@@ -5,7 +5,7 @@ docker-compose up
 
 # 2. setup database container
 docker exec -it user_data bash
-mysql -u root -p
+mysql -u root -p # password is 123
 ```
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123';
@@ -23,5 +23,9 @@ db.userProfile.find()
 
 
 ```bash
+# 4. test the asset service
+curl -L http://localhost:8008/?username=alice | json_pp
+
+# 5. test the user service
 curl -L http://localhost/?username=alice | json_pp
 ```
