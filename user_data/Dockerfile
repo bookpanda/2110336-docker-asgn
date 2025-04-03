@@ -1,8 +1,8 @@
-FROM _______________
+FROM mysql:8.0
 
-ENV MYSQL_ROOT_PASSWORD __________
-ENV MYSQL_DATABASE _______________
-ENV MYSQL_USER _________________
-ENV MYSQL_PASSWORD _______________
+ENV MYSQL_ROOT_PASSWORD "123"
+ENV MYSQL_DATABASE "ABCompany"
+ENV MYSQL_USER "users_service"
+ENV MYSQL_PASSWORD "123"
 
-ADD __________________
+ADD ./ABCompany.sql /docker-entrypoint-initdb.d/init.sql

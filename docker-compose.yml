@@ -2,6 +2,7 @@ version: '3.3'
 
 services:
     asset_mapping:
+        container_name: asset_mapping
         build: asset_mapping
         ports:
             - "27017:27017"
@@ -38,4 +39,5 @@ services:
         - PORT=80
 
     db:
+        container_name: user_data
         build: user_data
