@@ -14,6 +14,7 @@ services:
     
     asset_service:
         build: asset_service
+        container_name: asset_service
         ports:
             - "8008:8008"
         depends_on:
